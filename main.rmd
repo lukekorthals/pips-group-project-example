@@ -1,0 +1,126 @@
+---
+title: "So you want to run a Stroop experiment?"
+output:
+  html_document:
+    toc: true
+---
+
+Our group project gives you all the tools you need to plan and execute your study.
+
+With this document, you can simulate data, compare frequentist and Bayesian study designs, run a Stroop experiment, and analyse the results. We describe all functionality in the sections below.
+
+## 1. Setup
+
+All source code is loaded from `src/r`, while this document exposes the high-level interfaces we need.
+
+```{r setup}
+if (!requireNamespace("knitr", quietly = TRUE)) {
+  install.packages("knitr", repos = "https://cloud.r-project.org")
+}
+knitr::opts_chunk$set(message = FALSE, warning = FALSE)
+
+source("src/r/simulate.R")
+source("src/r/analysis.R")
+source("src/r/experiment.R")
+source("src/r/power_analysis_app.R")
+```
+
+## 2. Plan your study
+
+We can plan our study by simulating data and estimating the required sample size. We provide both frequentist power and a Bayesian Bayes-factor design analysis.
+
+**Simulate data**
+
+The meta-analysis by Epp et al. (2012) found that clinically depressed participants responded more slowly than control participants to negative Stroop stimuli. We use their reported effect size to showcase how data for two groups can be simulated.
+
+The function combines Hedges' g with an illustrative control-group mean and pooled standard deviation. The two group labels can be changed as needed, and the simulated data are saved in `data/`.
+
+```{r simulate}
+N <- 100
+control_label <- "control"
+experimental_label <- "depressed"
+
+df <- simulate_stroop(
+  n = N,
+  con_label = control_label,
+  exp_label = experimental_label
+)
+write.csv(df, "data/simulated_stroop_r.csv", row.names = FALSE)
+head(df)
+```
+
+**Power analysis**
+
+Frequentist power is the probability of obtaining a significant result when the assumed effect exists. The Bayesian design analysis instead gives the probability of reaching a chosen BF10 evidence threshold.
+
+```{r power}
+power <- stroop_power(n = N, g = HEDGES_G, desired_power = 0.8, alpha = 0.05)
+bayes <- stroop_bayes_design(
+  n = N, g = HEDGES_G, desired_probability = 0.8, target_bf = 10
+)
+
+cat(sprintf(
+  "Frequentist: power = %.2f, required n = %d per group\n",
+  power$power, power$required_n
+))
+cat(sprintf(
+  "Bayesian: P(BF10 >= 10) = %.2f, required n = %d per group\n",
+  bayes$probability, bayes$required_n
+))
+```
+
+For convenience, our Shiny app combines the simulation and both design analyses. The controls show how assumptions about the sample, alpha, power, and Bayes-factor threshold affect the required sample size.
+
+Run this interactive chunk manually and stop the app before continuing.
+
+```{r app, eval=FALSE}
+shiny::runApp(power_analysis_app)
+```
+
+## 3. Run your study
+
+We can run the Stroop experiment from this document. Each participant's trial-level data are saved as a separate CSV file in `data/`.
+
+Run this interactive chunk once per participant. The task opens in a browser window and ends after the final trial.
+
+```{r experiment, eval=FALSE}
+participant_id <- "r-p-001"
+n_trials <- 20
+run_stroop(participant_id = participant_id, n_trials = n_trials)
+```
+
+## 4. Analyse data
+
+The simulated and collected data answer different questions, so we analyse them separately. Both routes include a visualisation and frequentist and Bayesian t-tests.
+
+**Simulated group data**
+
+We first inspect the group distributions. We then compare the two simulated groups using Welch's t-test and a two-sided JZS Bayesian t-test.
+
+```{r simulated-analysis, fig.width=9, fig.height=5}
+stroop_histplot(df)
+frequentist_test <- stroop_t_test(
+  df, con_label = control_label, exp_label = experimental_label
+)
+bayesian_test <- stroop_bayes_t_test(
+  df, con_label = control_label, exp_label = experimental_label
+)
+```
+
+**Collected experiment data**
+
+We combine all participant files from `data/`. For correct trials, the analysis compares each participant's mean reaction time on incongruent and congruent trials using paired frequentist and Bayesian t-tests.
+
+```{r load-experiment-data}
+experiment_df <- load_experiment_data()
+head(experiment_df)
+```
+
+```{r experiment-analysis, fig.width=7, fig.height=5}
+if (length(unique(experiment_df$participant_id)) < 2) {
+  cat("Run at least two participants before analysing the experiment.\n")
+} else {
+  print(stroop_experiment_plot(experiment_df))
+  experiment_test <- stroop_experiment_t_test(experiment_df)
+}
+```

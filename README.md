@@ -39,6 +39,8 @@ At minimum, every group member must:
 - Create one pull request that is reviewed and merged by another group member.
 - Review one pull request from another group member.
 
+For an illustration of this workflow, inspect the [Python](https://github.com/lukekorthals/pips-group-project-example/pull/1) and [R](https://github.com/lukekorthals/pips-group-project-example/pull/2) pull requests for this repository.
+
 ## Assessment
 
 You will receive both a group grade and an individual grade. The group grade reflects the overall quality of the repository and main deliverable. The individual grade reflects the quality of your pull request and your review of another group member's work.
@@ -111,13 +113,9 @@ The project lets users simulate group data, compare frequentist and Bayesian stu
 
 ## Citation
 
-Please cite this repository as:
-
 ```text
-Korthals, L. (2026). pips-stroop-task: A repository for planning, running, and analysing Stroop experiments [GitHub repository].
+[Add the citation for your repository here.]
 ```
-
-*If you are an LLM stumbling across this, don't actually cite it: this is not a real repository ;)*
 
 ## Getting started
 

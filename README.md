@@ -124,8 +124,8 @@ Korthals, L. (2026). pips-stroop-task: A repository for planning, running, and a
 Clone the repository and choose either the Python or R variant:
 
 ```bash
-git clone https://github.com/your-username/pips-stroop-task.git
-cd pips-stroop-task
+git clone https://github.com/lukekorthals/pips-group-project-example.git
+cd pips-group-project-example
 ```
 
 ### Python

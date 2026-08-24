@@ -1,0 +1,22 @@
+[project]
+name = "pips-group-project-example"
+version = "0.1.0"
+description = "Minimal Python and R example for the PIPS group project"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dash>=4.4.1",
+    "ipykernel>=7.3.0",
+    "numpy>=2.5.2",
+    "pandas>=3.0.5",
+    "pingouin>=0.6.1",
+    "plotly>=6.9.0",
+    "scipy>=1.18.1",
+    "seaborn>=0.13.2",
+    "statsmodels>=0.14.6",
+]
+
+[dependency-groups]
+dev = [
+    "jupyterlab>=4.6.3",
+]

@@ -40,7 +40,7 @@ You only have to create one of these but feel free to create more if you want. W
 It does not matter, what data you use or where it comes from (simulation, publicly available, collected amongst your fellow students, etc.), as long as it is psychological in the broader sense. This includes, experimental data, questionnaire data, eye-tracking, brain imaging data, etc. The analysis must include at least one appropriate inferential statistical analysis; for example, running regression models or statistical tests. These analysis do not have to be complex, but they should be motivated and appropriate for the data your are using. You should also include at least one informative plot that supports the analysis. 
 
 > [!CAUTION]
-> If you take the easiest route, running two lines of code to sample from arbitrary normal distributions and calling it a simulation without motivation based on the literature, create a simple scatter plot without making it visually appealing and helpful, running a simple regression and reporting the result without interpretation or discussion, you probably wont fail, but cannot expect to get a high grade either. Instead, try things, explore, and make it interesting! See how far you can push your creativity by working in a group and utilizing large language models. This, would not be enough (actually the example below would fail you, so dont do it 😉): 
+> If you take the easiest route, running two lines of code to sample from arbitrary normal distributions and calling it a simulation without motivation based on the literature, create a simple scatter plot without making it visually appealing and helpful, running a simple regression and reporting the result without interpretation or discussion, you probably wont fail, but cannot expect to get a high grade either. Instead, try things, explore, and make it interesting! See how far you can push your creativity by working in a group and utilizing large language models. The four lines of code below would not be enough and you would fail, so dont do it 😉: 
 
 ```{R}
 # We simulated x and y. They are not related.
@@ -65,21 +65,21 @@ Each group member should take primary responsibility for one of the three contri
 You are responsible for making sure other people (including us graders) can clone your repository, install requirements and run the main deliverable without issues. You are also responseble for ensureing that the project, the README, and the main deliverable are well structured, clear, and easy to understand. 
 
 > [!TIP]
-> This responsibility has the least exposure to low-level code, but it is not a trivial task to ensure that everything works. This task is probably best assigned to a group member who excells at organization and project management.
+> This responsibility has the least exposure to low-level code, but it is not a trivial task to ensure that everything works. This task is probably best assigned to a group member who excells at organization and project management but also has a good understanding of working directories, and how different files in different locations containing data and code interact and can be used effectively in the main deliverable. Looking at this example repository will likely help you a lot!
 
 **2. Data simulation, experiment, or app:**
 
 You are responsible for creating what might be the most complicated part of your project and requirements change dramatically depending on what you choose to do. With AI assistance you can build big things, but you need to make sure that what you build is useful, and actually does what it is supposed to do. Working on this project also means that you likely have to work with packages or tools that you have never used before such as shiny, dash, streamlit, psychopy, etc.
 
 > [!TIP]
-> This responsibility has the most exposure to working with a lot of code a new tools. It is probably best assigned to a group member who is most confident in their ability to understand code and get LLMs to do what they want.
+> This part of the project will likely utilize the most amount of code, most of which will be AI generated and some of which might get complicated or is at least new to you because it relies on packages you are unfamiliar with. This task is probably best assigned to a group member who is excited about working with new technologies and is most confident in their ability to understand LLM written code and get LLMs to do what they want.
 
 **3. Statistical analyses and visualisations:**
 
 You are responsible for the statistical analyses and visualisations. You need to make sure that the analyses are appropriate for the data you are using, and that the visualisations are informative and support your analyses. You also need to make sure that the analyses and visualisations are reproducible, and that they work when the repository is cloned into a new environment. 
 
 > [!TIP]
-> This responsibility requires moderate coding skills but also a good understanding of statistics and data visualisations. This task is probably best assigned to a group member who feels confident in working with tidyr, dplyr, ggplot2, and other data manipulation and visualisation packages as well as statistical analyses in R or Python.
+> This responsibility requires moderate coding skills but also a good understanding of statistics and data visualisations. This task is probably best assigned to a group member who feels confident in working with tidyr, dplyr, ggplot2, and other data manipulation and visualisation packages as well as statistical analyses in R or Python. This might be the best task for a group member who just learned how to code, as the lectures covered data manipulation, visualisation and statistical analyses. But even so we ecourage you to see how far you can push your new skills with LLM assistance.
 
 > [Caution]
 > Even though each group member has a primary responsibility and your individual score will largely depend on your individual contributions, you are all responsible for the overall quality of your groups work and the largest part of your final grade depends on the overall quality of your repository and main deliverable. Make sure to communicate with your group members and help each other out if needed.

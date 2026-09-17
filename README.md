@@ -1,6 +1,11 @@
 # PIPS group project example
 
-This repository serves as a template for the group project in the Programming in Psychological Science (PIPS) course of the Research Master Psychology at the University of Amsterdam.
+This repository serves as a template for the group project in the Programming in Psychological Science (PIPS) course of the Research Master Psychology at the University of Amsterdam and explains the task, requirements, and assessment criteria. 
+
+The following will explain what you are expected to do, and how we will assess your work. Further down starts an example for how you could document your own repository in a README. This repository also includes a bunch of working examples in Python and R, which serve as inspiration for your own project. 
+
+>[!WARNING]
+> Like your own projects, parts of this repository were written with AI assistance. Be mindful that this repository is not reflective of a perfect project that would automatically receive a 10. All of the code was written (or prompted) in about five hours, and it is shallower than what we expect from your group projects.
 
 ## Instructions for the group project
 
@@ -34,7 +39,7 @@ You only have to create one of these but feel free to create more if you want. W
 
 It does not matter, what data you use or where it comes from (simulation, publicly available, collected amongst your fellow students, etc.), as long as it is psychological in the broader sense. This includes, experimental data, questionnaire data, eye-tracking, brain imaging data, etc. The analysis must include at least one appropriate inferential statistical analysis; for example, running regression models or statistical tests. These analysis do not have to be complex, but they should be motivated and appropriate for the data your are using. You should also include at least one informative plot that supports the analysis. 
 
-> [Caution]
+> [!CAUTION]
 > If you take the easiest route, running two lines of code to sample from arbitrary normal distributions and calling it a simulation without motivation based on the literature, create a simple scatter plot without making it visually appealing and helpful, running a simple regression and reporting the result without interpretation or discussion, you probably wont fail, but cannot expect to get a high grade either. Instead, try things, explore, and make it interesting! See how far you can push your creativity by working in a group and utilizing large language models. This, would not be enough (actually the example below would fail you, so dont do it 😉): 
 
 ```{R}

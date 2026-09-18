@@ -81,7 +81,7 @@ You are responsible for the statistical analyses and visualisations. You need to
 > [!TIP]
 > This responsibility requires moderate coding skills but also a good understanding of statistics and data visualisations. This task is probably best assigned to a group member who feels confident in working with tidyr, dplyr, ggplot2, and other data manipulation and visualisation packages as well as statistical analyses in R or Python. This might be the best task for a group member who just learned how to code, as the lectures covered data manipulation, visualisation and statistical analyses. But even so we ecourage you to see how far you can push your new skills with LLM assistance.
 
-> [Caution]
+> [!Caution]
 > Even though each group member has a primary responsibility and your individual score will largely depend on your individual contributions, you are all responsible for the overall quality of your groups work and the largest part of your final grade depends on the overall quality of your repository and main deliverable. Make sure to communicate with your group members and help each other out if needed.
 
 ### Collaboration on GitHub

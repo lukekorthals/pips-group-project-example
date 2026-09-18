@@ -24,8 +24,8 @@ Your repository must contain:
 Your project must include:
 
 1. An anylsis of psychological data, including at least one appropriate inferential statistical analysis and an informative plot supporting it. 
-2. A data simulation, an experiment script (e.g., PsychoPy), or an app (e.g., Dash, Streamlit, or Shiny).
-3. A single main deliverable as described above. This file must combine code and markdown, and allow running the simulation, experiment, or app (1) and the analysis (2). 
+2. A data simulation OR an experiment script (e.g., PsychoPy) OR an app (e.g., Dash, Streamlit, or Shiny). One is required, multiple are a bonus.
+3. A single `main.<filextension>` deliverable as described above. This file must combine code and markdown, and allow running the simulation, experiment, or app (1) and the analysis (2). 
 
 **Main Deliverable:**
 

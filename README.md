@@ -5,11 +5,11 @@ This repository serves as a template for the group project in the Programming in
 The following will explain what you are expected to do, and how we will assess your work. Further down starts an example for how you could document your own repository in a README. This repository also includes a bunch of working examples in Python and R, which serve as inspiration for your own project. 
 
 >[!WARNING]
-> Like your own projects, parts of this repository were written with AI assistance. Be mindful that this repository is not reflective of a perfect project that would automatically receive a 10. All of the code was written (or prompted) in about five hours, and it is shallower than what we expect from your group projects.
+> Be mindful that this repository is not reflective of a perfect project that would automatically receive a 10. All of the code was written (or prompted) in about five hours, and it is shallower than what we expect from your group projects.
 
 ## Instructions for the group project
 
-In groups of three, you will create a GitHub repository to which every group member contributes.
+In groups of three, you will create a GitHub repository to which every group member contributes visibly (i.e., makes pull requests, authors commits...).
 
 ### Repository and deliverable
 
@@ -17,15 +17,15 @@ Your repository must contain:
 
 1. A concise README with a brief project description, all dependencies and references, and instructions for using the repository. We will clone your repository and expect to run the main deliverable without errors.
 2. A sensible folder structure, good organization of scripts, consistent naming conventions, and code that is easily understood.
-3. One main deliverable which can be a jupyter notebook, R markdown file, Quarto document, or any other file that combines markdown and code. It must be called `main.<fileextension>` and should NOT contain all code. Instead, store supporting code and data in separate folders, import them into the main deliverable, only expose high level functions to users and provide concise explanations in markdown to guide users through the project.
+3. One main deliverable which can be a jupyter notebook, R markdown file, Quarto document, or any other file that combines markdown and code. It must be called `main.<fileextension>` and should NOT contain all code. Instead, store supporting code and data in separate folders (here called: src), import them into the main deliverable, only expose high level functions to users and provide concise explanations in markdown to guide users through the project.
 
 ### Project content
 
 Your project must include:
 
-1. An anylsis of psychological data, including at least one appropriate inferential statistical analysis and an informative plot supporting it. 
-2. A data simulation OR an experiment script (e.g., PsychoPy) OR an app (e.g., Dash, Streamlit, or Shiny). One is required, multiple are a bonus.
-3. A single `main.<filextension>` deliverable as described above. This file must combine code and markdown, and allow running the simulation, experiment, or app (1) and the analysis (2). 
+1. An analysis of psychological data, including at least one appropriate statistical analysis and an informative plot supporting it. 
+2. A data simulation OR an experiment script (e.g., PsychoPy) OR an app (e.g., Dash, Streamlit, or Shiny).
+3. A nice README and a single `main.<filextension>` deliverable as described above. This file must combine code and informative markdown, and allow running the simulation, experiment, or app (1) and the analysis (2). 
 
 **Main Deliverable:**
 
@@ -37,19 +37,10 @@ You only have to create one of these but feel free to create more if you want. W
 
 **Analysis of psychological data:**
 
-It does not matter, what data you use or where it comes from (simulation, publicly available, collected amongst your fellow students, etc.), as long as it is psychological in the broader sense. This includes, experimental data, questionnaire data, eye-tracking, brain imaging data, etc. The analysis must include at least one appropriate inferential statistical analysis; for example, running regression models or statistical tests. These analysis do not have to be complex, but they should be motivated and appropriate for the data your are using. You should also include at least one informative plot that supports the analysis. 
+It does not matter, what data you use or where it comes from (scientific article, simulation, public databases, collected amongst your fellow students, etc.), as long as it is psychological in the broader sense. This includes, experimental data, questionnaire data, eye-tracking, brain imaging data, books reviews, movie ratings etc. The analysis must include at least one appropriate inferential statistical analysis; for example, running regression models or statistical tests. These analysis do not have to be complex, but they should be motivated and appropriate for the data your are using. You should also include at least one informative plot that supports the analysis. 
 
 > [!CAUTION]
-> If you take the easiest route, running two lines of code to sample from arbitrary normal distributions and calling it a simulation without motivation based on the literature, create a simple scatter plot without making it visually appealing and helpful, running a simple regression and reporting the result without interpretation or discussion, you probably wont fail, but cannot expect to get a high grade either. Instead, try things, explore, and make it interesting! See how far you can push your creativity by working in a group and utilizing large language models. The four lines of code below would not be enough and you would fail, so dont do it 😉: 
-
-```{R}
-# We simulated x and y. They are not related.
-# simulation
-x <- rnorm(100)
-y <- rnorm(100)
-plot(x, y)
-summary(lm(y ~ x)) # no relationship
-```
+> If you take the easiest route, running two lines of code to sample from arbitrary normal distributions and calling it a simulation without motivation based on the literature, create a simple scatter plot without making it visually appealing and helpful, running a simple regression and reporting the result without interpretation or discussion, you might get a very disapppointing grade. Instead, try things, explore, and find a project that addresses YOUR OWN INTERESTS! See how far you can push your creativity by working in a group and utilizing large language models.
 
 
 ### Division of responsibilities
@@ -62,14 +53,14 @@ Each group member should take primary responsibility for one of the three contri
 
 **1. Project structure and main deliverable:**
 
-You are responsible for making sure other people (including us graders) can clone your repository, install requirements and run the main deliverable without issues. You are also responseble for ensureing that the project, the README, and the main deliverable are well structured, clear, and easy to understand. 
+You are responsible for making sure other people (including us graders) can clone your repository, install requirements and run the main deliverable without issues. You are also responsible for ensureing that the project, the README, and the main deliverable are well structured, clear, and easy to understand. 
 
 > [!TIP]
-> This responsibility has the least exposure to low-level code, but it is not a trivial task to ensure that everything works. This task is probably best assigned to a group member who excells at organization and project management but also has a good understanding of working directories, and how different files in different locations containing data and code interact and can be used effectively in the main deliverable. Looking at this example repository will likely help you a lot!
+> This responsibility has the least exposure to coding, but it is not a trivial task to ensure that everything works. This task is probably best assigned to a group member who excells at organization and project management but also has a good understanding of working directories, and how different files in different locations containing data and code interact and can be used effectively in the main deliverable. Looking at this example repository will likely help you a lot!
 
 **2. Data simulation, experiment, or app:**
 
-You are responsible for creating what might be the most complicated part of your project and requirements change dramatically depending on what you choose to do. With AI assistance you can build big things, but you need to make sure that what you build is useful, and actually does what it is supposed to do. Working on this project also means that you likely have to work with packages or tools that you have never used before such as shiny, dash, streamlit, psychopy, etc.
+You are responsible for creating what might be the most complicated part of your project and requirements change dramatically depending on what you choose to do. With AI assistance you can build big things, but you need to make sure that what you build is useful/interesting, and actually does what it is supposed to do. Working on this project also means that you likely have to work with packages or tools that you have never used before such as shiny, dash, streamlit, psychopy, etc.
 
 > [!TIP]
 > This part of the project will likely utilize the most amount of code, most of which will be AI generated and some of which might get complicated or is at least new to you because it relies on packages you are unfamiliar with. This task is probably best assigned to a group member who is excited about working with new technologies and is most confident in their ability to understand LLM written code and get LLMs to do what they want.
@@ -86,6 +77,8 @@ You are responsible for the statistical analyses and visualisations. You need to
 
 ### Collaboration on GitHub
 
+Your initial commits to the repo can be a mess, so make frequent commits. We will judge the final state.
+
 At minimum, every group member must:
 
 - Create one pull request that is reviewed and merged by another group member.
@@ -95,7 +88,7 @@ For an illustration of this workflow, inspect the [Python](https://github.com/lu
 
 ## Assessment
 
-You will receive both a group grade and an individual grade. The group grade reflects the overall quality of the repository and main deliverable and is most important for your final grade. The individual grade is mainly determined by the quality of your pull request, the review of another group member's pull request. Additionally, we adjust your grade based on the quality of the part of the project for which you were primarily responsible.
+You will receive both a group grade and an individual grade. The group grade reflects the overall quality of the repository and main deliverable and is most important for your final grade. The individual grade is mainly determined by the quality of your pull request and your review of another group member's pull request. Additionally, we adjust your grade based on the quality of the part of the project for which you were primarily responsible.
 
 We will assess your project by:
 1. cloning your repository and following instructions in the README to install requirements and work through the main deliverable

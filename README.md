@@ -97,6 +97,9 @@ We will assess your project by:
 4. (Optionally) inspecting individual files, in case the main deliverable does not run or seems to produce inconsistent results.
 5. Finally, we assign a group grade (60%), and an individual grade (40%) between 1 and 10 based on the criteria below. Your final grade is the weighted average of both grades. 
 
+> [!Caution]
+> Note that we will not score each of the following criteria individually. Instead we assign holistic individual grades between 1 and 10 to each of you and one holistic group grade. Nevertheless, the criteria below will tell you what we are looking for. 
+
 ### Criteria for group grade (60% of your final grade)
 - **Minimal requirements:** 
   - The repository contains a README, and a main deliverable.

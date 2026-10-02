@@ -90,12 +90,13 @@ For an illustration of this workflow, inspect the [Python](https://github.com/lu
 
 You will receive both a group grade and an individual grade. The group grade reflects the overall quality of the repository and main deliverable and is most important for your final grade. The individual grade is mainly determined by the quality of your pull request and your review of another group member's pull request. Additionally, we adjust your grade based on the quality of the part of the project for which you were primarily responsible.
 
-We will assess your project by:
-1. cloning your repository and following instructions in the README to install requirements and work through the main deliverable
-2. Running the main deliverable from top to bottom according to the instructions and explanations in the README and main deliverable
-3. Inspecting your individual pull request and the review of another group member's pull request
-4. (Optionally) inspecting individual files, in case the main deliverable does not run or seems to produce inconsistent results.
-5. Finally, we assign a group grade (60%), and an individual grade (40%) between 1 and 10 based on the criteria below. Your final grade is the weighted average of both grades. 
+>[!IMPORTANT]
+> We will assess your project by:
+> 1. cloning your repository and following instructions in the README to install requirements and work through the main deliverable
+> 2. Running the main deliverable from top to bottom according to the instructions and explanations in the README and main deliverable
+> 3. Inspecting your individual pull request and the review of another group member's pull request
+> 4. (Optionally) inspecting individual files, in case the main deliverable does not run or seems to produce inconsistent results.
+> 5. Finally, we assign a group grade (60%), and an individual grade (40%) between 1 and 10 based on the criteria below. Your final grade is the weighted average of both grades. 
 
 > [!Caution]
 > Note that we will not score each of the following criteria individually. Instead we assign holistic individual grades between 1 and 10 to each of you and one holistic group grade. Nevertheless, the criteria below will tell you what we are looking for. 

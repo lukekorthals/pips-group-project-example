@@ -21,11 +21,12 @@ Your repository must contain:
 
 ### Project content
 
-Your project must include:
+>[!IMPORTANT]
+> Your project must include:
 
-1. An analysis of psychological data, including at least one appropriate statistical analysis and an informative plot supporting it. 
-2. A data simulation OR an experiment script (e.g., PsychoPy) OR an app (e.g., Dash, Streamlit, or Shiny).
-3. A nice README and a single `main.<filextension>` deliverable as described above. This file must combine code and informative markdown, and allow running the simulation, experiment, or app (1) and the analysis (2). 
+> 1. An analysis of psychological data, including at least one appropriate statistical analysis and an informative plot supporting it. 
+> 2. A data simulation OR an experiment script (e.g., PsychoPy) OR an app (e.g., Dash, Streamlit, or Shiny).
+> 3. A nice README and a single `main.<filextension>` deliverable as described above. This file must combine code and informative markdown, and allow running the simulation, experiment, or app (1) and the analysis (2). 
 
 **Main Deliverable:**
 
@@ -45,11 +46,12 @@ It does not matter, what data you use or where it comes from (scientific article
 
 ### Division of responsibilities
 
-Each group member should take primary responsibility for one of the three contributions:
+>[!IMPORTANT]
+> Each group member should take primary responsibility for one of the three contributions:
 
-1. The `main.<fileextension>` file, README, and greater project structure
-2. The data simulation, experiment, or app
-3. The statistical analyses and visualisations
+> 1. The `main.<fileextension>` file, README, and greater project structure
+> 2. The data simulation, experiment, or app
+> 3. The statistical analyses and visualisations
 
 **1. Project structure and main deliverable:**
 

@@ -17,14 +17,14 @@ Your repository must contain:
 
 1. A concise README with a brief project description, all dependencies and references, and instructions for using the repository. We will clone your repository and expect to run the main deliverable without errors.
 2. A sensible folder structure, good organization of scripts, consistent naming conventions, and code that is easily understood.
-3. One main deliverable which can be a jupyter notebook, R markdown file, Quarto document, or any other file that combines markdown and code. It must be called `main.<fileextension>` and should NOT contain all code. Instead, store supporting code and data in separate folders (here called: src), import them into the main deliverable, only expose high level functions to users and provide concise explanations in markdown to guide users through the project.
+3. One main deliverable which can be a R markdown file, Quarto document, jupyter notebook, or any other file that combines markdown and code. It must be called `main.<fileextension>` and should NOT contain all code. Instead, store supporting code and data in separate folders (here called: src), import them into the main deliverable, only expose high level functions to users and provide concise explanations in markdown to guide users through the project.
 
 ### Project content
 
 >[!IMPORTANT]
 > Your project must include:
 > 1. An analysis of psychological data, including at least one appropriate statistical analysis and an informative plot supporting it. 
-> 2. A data simulation OR an experiment script (e.g., PsychoPy) OR an app (e.g., Dash, Streamlit, or Shiny).
+> 2. A data simulation OR an app (e.g., Dash, Streamlit, or Shiny) OR an experiment script (e.g., PsychoPy).
 > 3. A nice README and a single `main.<filextension>` deliverable as described above. This file must combine code and informative markdown, and allow running the simulation, experiment, or app (1) and the analysis (2). 
 
 **Main Deliverable:**
@@ -202,17 +202,6 @@ git clone https://github.com/lukekorthals/pips-group-project-example.git
 cd pips-group-project-example
 ```
 
-### Python
-
-The Python variant requires Python 3.12 or newer and [uv](https://docs.astral.sh/uv/). Install the locked dependencies and open the notebook:
-
-```bash
-uv sync
-uv run jupyter lab main.ipynb
-```
-
-Run `main.ipynb` from top to bottom. The Dash app and experiment open interactive interfaces; stop the app before continuing and keep the experiment window in focus while responding.
-
 ### R
 
 The R variant requires R 4.4 or newer and RStudio is recommended. Install the packages needed to open an R Markdown document:
@@ -223,23 +212,35 @@ install.packages(c("knitr", "rmarkdown"))
 
 Open `main.rmd` in RStudio and run its chunks from top to bottom. The sourced R scripts use `requireNamespace()` and automatically install any other missing packages. Interactive Shiny chunks are not evaluated while knitting and should be run manually.
 
+
+### Python (if applicable)
+
+The Python variant requires Python 3.12 or newer and [uv](https://docs.astral.sh/uv/). Install the locked dependencies and open the notebook:
+
+```bash
+uv sync
+uv run jupyter lab main.ipynb
+```
+
+Run `main.ipynb` from top to bottom. The Dash app and experiment open interactive interfaces; stop the app before continuing and keep the experiment window in focus while responding.
+
 ## Repository structure
 
 ```text
 pips-stroop-task/
 ├── data/                       # Simulated and collected CSV files
 ├── src/
-│   ├── py/                     # Python analysis, experiment, app, and simulation
-│   └── r/                      # Equivalent R scripts
-├── main.ipynb                  # Python main deliverable
+│   ├── r/                      # Equivalent R scripts
+│   └── py/                     # Python analysis (if applicable), experiment, app, and simulation
 ├── main.rmd                    # R main deliverable
-├── pyproject.toml              # Python metadata and dependencies
+├── main.ipynb                    # Python main deliverable (if applicable)
+├── pyproject.toml              # Python metadata and dependencies (if applicable)
 └── uv.lock                     # Exact Python dependency versions
 ```
 
 ## Using the project
 
-Choose `main.ipynb` for Python or `main.rmd` for R. Both main deliverables cover the following steps:
+Choose  `main.rmd` for R or `main.ipynb` for Python (if applicable). Both main deliverables cover the following steps:
 
 1. Simulate and save reaction-time data.
 2. Conduct frequentist power analysis and Bayesian Bayes-factor design analysis.
@@ -252,22 +253,22 @@ The experiment asks participants to report the ink colour using the R, G, B, and
 The app and experiment can also be started outside the notebook:
 
 ```bash
-uv run python -m src.py.power_analysis_app
-uv run python -m src.py.experiment
-```
-
-The equivalent R commands are:
-
-```bash
 Rscript src/r/power_analysis_app.R
 Rscript src/r/experiment.R
 ```
 
+The equivalent Python commands are:
+
+```bash
+uv run python -m src.py.power_analysis_app
+uv run python -m src.py.experiment
+```
+
 ## Dependencies
 
-The Python analysis uses NumPy, pandas, SciPy, statsmodels, Pingouin, seaborn, and Plotly. Dash provides the app, Tkinter provides the experiment window, and JupyterLab and ipykernel support the notebook. Python dependencies are declared in `pyproject.toml` and locked in `uv.lock`.
-
 The R analysis uses ggplot2 and BayesFactor, while Shiny provides both interactive interfaces. `knitr` and `rmarkdown` support the main document, and `later` controls trial timing. The R scripts install these packages when they are missing.
+
+The Python analysis uses NumPy, pandas, SciPy, statsmodels, Pingouin, seaborn, and Plotly. Dash provides the app, Tkinter provides the experiment window, and JupyterLab and ipykernel support the notebook. Python dependencies are declared in `pyproject.toml` and locked in `uv.lock`.
 
 ## Reference
 

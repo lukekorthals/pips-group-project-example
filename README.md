@@ -84,7 +84,7 @@ At minimum, every group member must:
 - Create one pull request that is reviewed and merged by another group member.
 - Review one pull request from another group member.
 
-For an illustration of this workflow, inspect the [Python](https://github.com/lukekorthals/pips-group-project-example/pull/1) and [R](https://github.com/lukekorthals/pips-group-project-example/pull/2) pull requests for this repository.
+For an illustration of this workflow, inspect the [R](https://github.com/lukekorthals/pips-group-project-example/pull/2) and [Python](https://github.com/lukekorthals/pips-group-project-example/pull/1) pull requests for this repository.
 
 ## Assessment
 
@@ -230,10 +230,10 @@ Run `main.ipynb` from top to bottom. The Dash app and experiment open interactiv
 pips-stroop-task/
 ├── data/                       # Simulated and collected CSV files
 ├── src/
-│   ├── r/                      # Equivalent R scripts
-│   └── py/                     # Python analysis (if applicable), experiment, app, and simulation
+│   ├── r/                      # R scripts
+│   └── py/                     # Equivalent Python analysis (if applicable), experiment, app, and simulation
 ├── main.rmd                    # R main deliverable
-├── main.ipynb                    # Python main deliverable (if applicable)
+├── main.ipynb                  # Python main deliverable (if applicable)
 ├── pyproject.toml              # Python metadata and dependencies (if applicable)
 └── uv.lock                     # Exact Python dependency versions
 ```
